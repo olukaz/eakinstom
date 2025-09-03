@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eakinstom International Ltd.</title>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+
+  <!-- React + ReactDOM (CDN) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel to compile JSX in the browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- App Code -->
+  <script type="text/babel">
+    function App() {
+      return (
+        <div className="min-h-screen bg-white text-gray-800">
+          {/* Top Bar */}
+          <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+            <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+              <a href="#home" className="flex items-center gap-2">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600 text-white font-bold">EI</span>
+                <div>
+                  <p className="font-semibold leading-tight">Eakinstom International Ltd.</p>
+                  <p className="text-xs text-gray-500 -mt-1">Agric Export • Nigeria</p>
+                </div>
+              </a>
+              <nav className="hidden md:flex items-center gap-6 text-sm">
+                <a href="#about" className="hover:text-emerald-700">About</a>
+                <a href="#products" className="hover:text-emerald-700">Products</a>
+                <a href="#standards" className="hover:text-emerald-700">Quality</a>
+                <a href="#partnerships" className="hover:text-emerald-700">Partnerships</a>
+                <a href="#contact" className="hover:text-emerald-700">Contact</a>
+              </nav>
+              <a href="#contact" className="hidden md:inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white font-medium shadow hover:bg-emerald-700">Request a Quote</a>
+            </div>
+          </header>
+
+          {/* Hero */}
+          <section id="home" className="relative overflow-hidden">
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-50 via-white to-amber-50" />
+            <div className="mx-auto max-w-7xl px-4 py-20 grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
+                  Premium Nigerian <span className="text-emerald-700">Cashew</span>, <span className="text-amber-700">Sesame</span> &amp; More —
+                  Exported with Care.
+                </h1>
+                <p className="mt-4 text-gray-600 max-w-prose">
+                  Eakinstom International Limited is an agricultural exports company focused on sourcing, processing, and shipping
+                  high-quality commodities including raw cashew nuts, sesame seed, and other specialty crops. We deliver reliable
+                  volumes, compliant documentation, and consistent quality for global buyers.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href="#products" className="rounded-2xl bg-gray-900 px-5 py-3 text-white font-medium shadow hover:bg-gray-800">Explore Products</a>
+                  <a href="#contact" className="rounded-2xl border border-gray-300 px-5 py-3 font-medium hover:border-gray-400">Get a Quote</a>
+                </div>
+                <div className="mt-6 flex items-center gap-6 text-sm text-gray-600">
+                  <div className="flex items-center gap-2"><span>📦</span> FOB / CIF / CFR</div>
+                  <div className="flex items-center gap-2"><span>🧾</span> NEPC • Phyto • SGS</div>
+                  <div className="flex items-center gap-2"><span>⛴️</span> Lagos &amp; Onne Ports</div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-3xl border bg-white shadow-sm p-4 grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl bg-amber-100 border flex items-center justify-center text-amber-900 font-semibold">Cashew Nuts</div>
+                  <div className="rounded-2xl bg-emerald-100 border flex items-center justify-center text-emerald-900 font-semibold">Sesame Seed</div>
+                  <div className="rounded-2xl bg-lime-100 border flex items-center justify-center text-lime-900 font-semibold">Ginger (DR/Spl.)</div>
+                  <div className="rounded-2xl bg-stone-100 border flex items-center justify-center text-stone-900 font-semibold">Charcoal (BBQ)</div>
+                </div>
+                <p className="text-xs text-gray-500 mt-2 text-center">*Illustrative product tiles – replace with photos later.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* About */}
+          <section id="about" className="mx-auto max-w-7xl px-4 py-16">
+            <div className="grid md:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold">Who We Are</h2>
+                <p className="mt-4 text-gray-600">
+                  We partner directly with farm clusters and certified aggregators across key Nigerian producing states. Our team
+                  manages end-to-end export operations — from quality checks and grading to logistics and documentation — so your
+                  shipment arrives as promised.
+                </p>
+                <ul className="mt-6 space-y-2 text-gray-700">
+                  <li>• Traceable sourcing and pre-shipment inspection</li>
+                  <li>• Flexible contracts: spot, forward, seasonal</li>
+                  <li>• Export documentation support and bankable contracts</li>
+                </ul>
+              </div>
+              <div className="rounded-3xl border bg-white shadow-sm p-6">
+                <h3 className="font-semibold text-lg">Fast Facts</h3>
+                <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+                  <div className="rounded-2xl bg-gray-50 p-4 border">
+                    <dt className="text-gray-500">Core Commodities</dt>
+                    <dd className="font-medium">Raw Cashew, Sesame</dd>
+                  </div>
+                  <div className="rounded-2xl bg-gray-50 p-4 border">
+                    <dt className="text-gray-500">Packaging</dt>
+                    <dd className="font-medium">Jute/PP – 50/80kg</dd>
+                  </div>
+                  <div className="rounded-2xl bg-gray-50 p-4 border">
+                    <dt className="text-gray-500">Payment</dt>
+                    <dd className="font-medium">LC, TT, CAD</dd>
+                  </div>
+                  <div className="rounded-2xl bg-gray-50 p-4 border">
+                    <dt className="text-gray-500">Shipment</dt>
+                    <dd className="font-medium">20'/40' FCL</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          {/* Products */}
+          <section id="products" className="bg-gray-50 border-y">
+            <div className="mx-auto max-w-7xl px-4 py-16">
+              <div className="flex items-end justify-between">
+                <h2 className="text-2xl md:text-3xl font-bold">Export Products</h2>
+                <a href="#contact" className="text-sm font-medium underline underline-offset-4">Request specs &amp; pricing</a>
+              </div>
+
+              <div className="mt-8 grid md:grid-cols-3 gap-6">
+                {/* Cashew */}
+                <article className="rounded-3xl bg-white border shadow-sm p-6">
+                  <h3 className="font-semibold text-lg">Raw Cashew Nuts (RCN)</h3>
+                  <p className="mt-2 text-sm text-gray-600">High out-turn Nigerian RCN, uniform grading, moisture-controlled.</p>
+                  <ul className="mt-3 text-sm text-gray-700 space-y-1">
+                    <li>• KOR: 46–52</li>
+                    <li>• Moisture: ≤10%</li>
+                    <li>• Foreign Matter: ≤2%</li>
+                  </ul>
+                </article>
+
+                {/* Sesame */}
+                <article className="rounded-3xl bg-white border shadow-sm p-6">
+                  <h3 className="font-semibold text-lg">Sesame Seed</h3>
+                  <p className="mt-2 text-sm text-gray-600">White &amp; mixed varieties; cleaned for export with lab reports.</p>
+                  <ul className="mt-3 text-sm text-gray-700 space-y-1">
+                    <li>• Purity: 98–99.5%</li>
+                    <li>• Oil Content: 48–52%</li>
+                    <li>• Moisture: ≤7%</li>
+                  </ul>
+                </article>
+
+                {/* Add-ons */}
+                <article className="rounded-3xl bg-white border shadow-sm p-6">
+                  <h3 className="font-semibold text-lg">Other Lines (on request)</h3>
+                  <p className="mt-2 text-sm text-gray-600">Ginger (split/dry), shea nuts, hibiscus flower, and BBQ charcoal.</p>
+                  <ul className="mt-3 text-sm text-gray-700 space-y-1">
+                    <li>• Competitive lead times</li>
+                    <li>• SGS/Intertek inspection possible</li>
+                    <li>• Custom specs available</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* Quality & Certifications */}
+          <section id="standards" className="mx-auto max-w-7xl px-4 py-16">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold">Quality, Compliance &amp; Documentation</h2>
+                <p className="mt-4 text-gray-600">We operate with strict pre-shipment checks and documented SOPs. Third-party inspection and lab testing available on request.</p>
+                <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+                  <li className="rounded-2xl border p-4 bg-gray-50">NEPC Export License</li>
+                  <li className="rounded-2xl border p-4 bg-gray-50">Phytosanitary Certificate</li>
+                  <li className="rounded-2xl border p-4 bg-gray-50">Fumigation Certificate</li>
+                  <li className="rounded-2xl border p-4 bg-gray-50">SGS/Intertek Reports</li>
+                </ul>
+              </div>
+              <div className="rounded-3xl border bg-white shadow-sm p-6">
+                <h3 className="font-semibold text-lg">Typical Export Documents</h3>
+                <ol className="mt-4 list-decimal ml-5 text-sm text-gray-700 space-y-1">
+                  <li>Commercial Invoice &amp; Packing List</li>
+                  <li>Bill of Lading / Telex Release</li>
+                  <li>Certificate of Origin</li>
+                  <li>Quality &amp; Weight Certificates</li>
+                </ol>
+                <p className="mt-4 text-xs text-gray-500">*Exact set varies by destination and contract terms.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Partnerships */}
+          <section id="partnerships" className="bg-emerald-50 border-y">
+            <div className="mx-auto max-w-7xl px-4 py-16">
+              <h2 className="text-2xl md:text-3xl font-bold">Strategic Partnerships</h2>
+              <p className="mt-4 text-gray-700 max-w-prose">
+                We collaborate with industry partners to strengthen R&amp;D, input quality, and farm-level support. We are proud to be
+                in partnership with <span className="font-semibold">AKRSM Agroscience</span> to improve agronomic practices and
+                supply reliability across our value chains.
+              </p>
+
+              <div className="mt-8 grid sm:grid-cols-2 gap-6">
+                <div className="rounded-3xl bg-white border shadow-sm p-6 flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-xl bg-emerald-600 text-white grid place-items-center font-bold">AK</div>
+                  <div>
+                    <p className="font-semibold">AKRSM Agroscience</p>
+                    <p className="text-sm text-gray-600">Field extension, agronomy support &amp; input quality.</p>
+                  </div>
+                </div>
+                <div className="rounded-3xl bg-white border shadow-sm p-6 flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center font-bold">LG</div>
+                  <div>
+                    <p className="font-semibold">Logistics &amp; Inspection</p>
+                    <p className="text-sm text-gray-600">Port handling, freight forwarding &amp; third-party inspection.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section id="contact" className="mx-auto max-w-7xl px-4 py-16">
+            <div className="grid md:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold">Request a Quote / Contact</h2>
+                <p className="mt-4 text-gray-600">Tell us your destination port, target specs, and preferred incoterms. We'll reply with availability and pricing.</p>
+                <div className="mt-6 space-y-2 text-sm text-gray-700">
+                  <p><span className="font-medium">Email:</span> info@eakinstom.com</p>
+                  <p><span className="font-medium">Phone/WhatsApp:</span> +234-000-000-0000</p>
+                  <p><span className="font-medium">Office:</span> Lagos, Nigeria</p>
+                </div>
+              </div>
+              <form className="rounded-3xl border bg-white shadow-sm p-6 space-y-4">
+                <div>
+                  <label className="block text-sm font-medium">Full Name</label>
+                  <input type="text" className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" placeholder="Your name" />
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium">Email</label>
+                    <input type="email" className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" placeholder="you@company.com" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium">Company</label>
+                    <input type="text" className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" placeholder="Company name" />
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium">Product</label>
+                    <select className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                      <option>Raw Cashew Nuts (RCN)</option>
+                      <option>Sesame Seed</option>
+                      <option>Ginger (Split/Dry)</option>
+                      <option>Other (specify below)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium">Incoterms</label>
+                    <select className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                      <option>FOB</option>
+                      <option>CIF</option>
+                      <option>CFR</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium">Message / Specs</label>
+                  <textarea rows="4" className="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600" placeholder="Destination port, quantity (MT), quality specs, timeline…"></textarea>
+                </div>
+                <button type="button" className="w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">Send Inquiry</button>
+                <p className="text-xs text-gray-500">*This demo button is not connected. We can wire it to your email/CRM.</p>
+              </form>
+            </div>
+          </section>
+
+          {/* Footer */}
+          <footer className="border-t">
+            <div className="mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+              <p>© {new Date().getFullYear()} Eakinstom International Limited. All rights reserved.</p>
+              <div className="flex items-center gap-6">
+                <a href="#about" className="hover:text-emerald-700">About</a>
+                <a href="#products" className="hover:text-emerald-700">Products</a>
+                <a href="#contact" className="hover:text-emerald-700">Contact</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>
